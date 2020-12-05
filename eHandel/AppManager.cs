@@ -8,7 +8,7 @@ namespace eHandel
 {
     class AppManager
     {
-        public static void DisplayMenu()
+        public static void DisplayMenu()    
         {
             Console.Title = "eCommerce Squad";
             Console.WriteLine("Welcome to eCommerce Squads Online Shop.");
