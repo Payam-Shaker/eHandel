@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace eHandel
 {
-    class AppManager
+    public class AppManager
     {
+        public static Product1 product = new Product1();
+
         public static void DisplayMenu()
         {
             Console.Title = "eCommerce Squad";
@@ -27,10 +29,14 @@ namespace eHandel
 
             if (Input == "1")
             {
+                product.GetAllProducts();
                 //Visa alla produkter
             }
             else if (Input == "2")
             {
+                Console.WriteLine("Please enter the number of the product: ");
+                int userInput = Convert.ToInt32(Console.ReadLine());
+                product.GetProductById(userInput);
                 //Visa en specifik produkt
             }
             else if (Input == "3")
