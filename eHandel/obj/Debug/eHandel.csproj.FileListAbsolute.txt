@@ -5,3 +5,10 @@ C:\Users\KristofferJohansson\Documents\Programmering\eHandel\eHandel\bin\Debug\e
 C:\Users\KristofferJohansson\Documents\Programmering\eHandel\eHandel\bin\Debug\eHandel.pdb
 C:\Users\KristofferJohansson\Documents\Programmering\eHandel\eHandel\obj\Debug\eHandel.exe
 C:\Users\KristofferJohansson\Documents\Programmering\eHandel\eHandel\obj\Debug\eHandel.pdb
+C:\Users\Sebastian\source\repos\eHandel\eHandel\bin\Debug\eHandel.exe.config
+C:\Users\Sebastian\source\repos\eHandel\eHandel\bin\Debug\eHandel.exe
+C:\Users\Sebastian\source\repos\eHandel\eHandel\bin\Debug\eHandel.pdb
+C:\Users\Sebastian\source\repos\eHandel\eHandel\obj\Debug\eHandel.csprojAssemblyReference.cache
+C:\Users\Sebastian\source\repos\eHandel\eHandel\obj\Debug\eHandel.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\source\repos\eHandel\eHandel\obj\Debug\eHandel.exe
+C:\Users\Sebastian\source\repos\eHandel\eHandel\obj\Debug\eHandel.pdb
