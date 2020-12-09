@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace eHandel
 {
-    class Product
+    class Product : ProductManager
     {
-        //Instansvariabler för klasen Produkter.
+        //Instansvariabler för klassen Produkter.
         private int ProductID;
         private string ProduktName;
         private string ProduktInfo;
@@ -34,16 +34,22 @@ namespace eHandel
             ProductManager myProdManager = new ProductManager();
             myProdManager.CreateObjects();
 
-            Console.WriteLine("Choose products to add to shoppingcart by pressing the following numbers 1 - 5. ");
-
-            Console.WriteLine("Press 0 to return to eCommerce Squads start menu");
+            //Console.WriteLine("Choose products to add to shoppingcart by pressing the following numbers 1 - 5. ");
+            
+            Console.WriteLine("Press [1] To look att specific product: ");
+            Console.WriteLine("Press [0] To return to eCommerce Squad starting page.");
             string input = Console.ReadLine();
 
+            // Kommer inte tillbaka till huvudmenyn och kan 
+            // göra val utan menyn printas ut och programmet stängs ner.
             if (input == "0")
             {
                 Console.Clear();
-                MenuLayout myMenu = new MenuLayout();
-                myMenu.DisplayMenuLayout();
+                AppManager.DisplayMenu();
+            }
+            else if (input == "1") 
+            {
+                CreateObjekt();
             }
         }
 
@@ -64,7 +70,10 @@ namespace eHandel
             Console.WriteLine($"| {ProductID}              |   {ProduktName}                    |  {ProduktPrice}                |");
             Console.WriteLine("------------------------------------------------------------------------------");
 
+            
         }
+
+        
 
         // Getters för varje enskild parameter som finns i produkterna.
         public int GetProdID()

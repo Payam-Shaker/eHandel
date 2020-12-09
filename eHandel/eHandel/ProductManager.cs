@@ -11,10 +11,34 @@ namespace eHandel
        
         public ProductManager() { }
 
-        public void CreateObjekt() 
+        public static void CreateObjekt()
         {
-            Product OneObjekt = new Product();
+            // Gör så att användare kan visa en specifik produkt genom
+            // Payams metod GetProductById.
+            // Inte helt färdig än utan tänkte att när man har visat en viss produkt
+            // Skall man även kunna välja att lägga till den i varukorgen 
+            // Där man även ska kunna välja antal varor
+            // Om man är rik och vill lägga till 2000 st jackor skall man kunna göra det.
+            //********** Inte helt färdig än ***********
+
+                Console.Write("Input a productID by number to\n" +
+                                  "view a specific product: ");
+            
+            int input = Convert.ToInt32(Console.ReadLine());
+            Product1 anProdukt = new Product1();
+            Console.WriteLine("");
+            Console.WriteLine("");
+            anProdukt.GetProductById(input);
+
+            Console.WriteLine("");
+            string input2 = Console.ReadLine();
+
+            Console.Clear();
+            AppManager.DisplayMenu();
         }
+        
+
+        
 
 
         public void CreateObjects() 
@@ -29,7 +53,7 @@ namespace eHandel
 
             Product Tshirt = new Product(4, "Hilfiger Star", "Snyggare T-shirt är svår att hitta", 1099.00);
 
-            Product Hoodie = new Product(5, "Gant Blue    ", "För värme och komfort", 1400.00);
+            Product Hoodie = new Product(5, "Gant Hoodie  ", "För värme och komfort", 1400.00);
 
             Console.Clear();
             Header.PrintProductLayout();
