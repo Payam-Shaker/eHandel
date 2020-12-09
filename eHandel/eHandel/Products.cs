@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eHandel
 {
-    class Products : AppManager
+    class Product
     {
         //Instansvariabler för klasen Produkter.
         private int ProductID;
@@ -17,10 +17,10 @@ namespace eHandel
 
 
 
-        public Products() { }
+        public Product() { }
 
         // Konstruktor som tar emot 4st parametrar.
-        public Products(int ProdID, string ProdName, string ProdInfo, double ProdPrice)
+        public Product(int ProdID, string ProdName, string ProdInfo, double ProdPrice)
         {
             ProductID = ProdID;
             ProduktName = ProdName;
@@ -29,35 +29,12 @@ namespace eHandel
 
         }
 
-        public static void PrintProducts()
+        public void PrintProducts()
         {
-            // Skapar 6 olika objekt av klassen Produkter
-            Products Header = new Products();
+            ProductManager myProdManager = new ProductManager();
+            myProdManager.CreateObjects();
 
-            Products Jacka = new Products(1, "Canada Goose ", "En varm vinterjacka", 9999.00);
-
-            Products Skor = new Products(2, "Air Max Pro X", "Snabba skor perfekt för den som tränar", 1299.00);
-
-            Products Byxor = new Products(3, "G-star warp  ", "Stilrena byxor för den mode-medvetna", 1899.00);
-
-            Products Tshirt = new Products(4, "Hilfiger Star", "Snyggare T-shirt är svår att hitta", 1099.00);
-
-            Products Hoodie = new Products(5, "Gant Blue    ", "För värme och komfort", 1400.00);
-
-
-            // Skriver ut dessa samt Produktlayouten.
-            // Krävs troligtvis bara en metod i en annan klass som heter tillexempel ProductHeader eller något i den stilen.
-
-            Console.Clear();
-            Header.PrintProductLayout();
-
-            Jacka.PrintObjects();
-            Skor.PrintObjects();
-            Byxor.PrintObjects();
-            Tshirt.PrintObjects();
-            Hoodie.PrintObjects();
-
-            Console.WriteLine("");
+            Console.WriteLine("Choose products to add to shoppingcart by pressing the following numbers 1 - 5. ");
 
             Console.WriteLine("Press 0 to return to eCommerce Squads start menu");
             string input = Console.ReadLine();
@@ -65,10 +42,13 @@ namespace eHandel
             if (input == "0")
             {
                 Console.Clear();
-                DisplayMenu();
+                MenuLayout myMenu = new MenuLayout();
+                myMenu.DisplayMenuLayout();
             }
         }
 
+        
+        
         // En produkt layout för produkterna.
         public void PrintProductLayout()
         {

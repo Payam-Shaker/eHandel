@@ -11,24 +11,16 @@ namespace eHandel
         public static void DisplayMenu()    
         {
             Console.Title = "eCommerce Squad";
-            Console.WriteLine("Welcome to eCommerce Squads Online Shop.");
-            Console.WriteLine("");
-            Console.WriteLine("[1]Show all the products.");
-            Console.WriteLine("[2]Show one specific product.");
-            Console.WriteLine("[3]Show the shopping cart.");
-            Console.WriteLine("[4]Add your name and adress to your profile.");
-            Console.WriteLine("[5]Make the order.");
-            Console.WriteLine("[0]Exit the online shop.");
-            Console.WriteLine("");
-            Console.WriteLine("");
 
-            Console.WriteLine("Pick one option:");
+            MenuLayout myMenu = new MenuLayout();
+            myMenu.DisplayMenuLayout();
             string Input = Console.ReadLine();
 
             if (Input == "1")
             {
                 //Visa alla produkter
-                Products.PrintProducts();
+                Product OurProduct = new Product();
+                OurProduct.PrintProducts();
             }
             else if (Input == "2")
             {
@@ -37,6 +29,7 @@ namespace eHandel
             else if (Input == "3")
             {
                 //Visa kundvagnen
+                //ShoppingCartAdd.CreateCart();
             }
             else if (Input == "4")
             {

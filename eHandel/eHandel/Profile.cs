@@ -64,13 +64,13 @@ namespace eHandel
                 Console.WriteLine("What would you like to change? (First name, last name, delivery adress)");
                 string input2 = Console.ReadLine();
 
-                if (input2 == "First name" || input2 == "first Name")
+                if (input2 == "First name" || input2 == "First Name")
                 {
                     Console.Clear();
                     AskFirstName();
                     DoubleCheck();
                 }
-                else if (input2 == "last name" || input2 == "Last Name")
+                else if (input2 == "Last name" || input2 == "Last Name")
                 {
                     Console.Clear();
                     AskLastName();
